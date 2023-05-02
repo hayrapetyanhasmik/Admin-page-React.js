@@ -8,8 +8,10 @@ export default function Header(){
         navigate('/')
     }
     return(
-        <div style={{height: "30px"}}>
-            <Button style={{position: "absolute", right: "8px",top: "0px", background:"red",color:"white"}} variant="contained" size="small" onClick={handleLogOut}>Log Out</Button> 
+        <div style={{height: "30px", display:"flex",justifyContent:"flex-end", gap:"10px", margin:"10px"}}>
+            <Button  variant="contained" size="small" color="primary" onClick={()=>navigate('/register')}>Sign Up</Button> 
+            <Button  variant="contained" size="small" color="primary" onClick={()=>navigate('/login')}>Log In</Button> 
+            <Button style={{background:"red",color:"white"}} variant="contained" size="small" onClick={handleLogOut}>Log Out</Button> 
         </div>
     )
 }
