@@ -1,17 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { TableContainer, Table, TableBody,TableCell,TableRow,TableHead, Paper,makeStyles } from "@material-ui/core";
+import { TableContainer, Table, TableBody,TableCell,TableRow,TableHead, Paper} from "@material-ui/core";
 import { DeleteOutlined, Edit } from "@material-ui/icons";
 
-const useStyles = makeStyles((theme)=>({
-    header: {
-        backgroundColor: theme.palette.primary.light,
-        color: theme.palette.primary.white,
-    },
-}));
 
 export default function Users(){
-    const classes = useStyles();
     const [user, setUser] = useState([]);
     useEffect(() => {
     fetch("http://localhost:5000/users/getAll")
@@ -25,7 +18,7 @@ export default function Users(){
         <div>
         <TableContainer  component={Paper}>
             <Table  sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead className={classes.header}>
+            <TableHead style={{background:"#7FFF00"}}>
                 <TableRow >
                     <TableCell align="left">ID</TableCell>
                     <TableCell align="center">UserName</TableCell>

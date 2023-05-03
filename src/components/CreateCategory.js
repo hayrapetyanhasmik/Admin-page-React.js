@@ -50,7 +50,7 @@ export default function CreateCategory(){
         <div>
             <Container className={classes.container}component={Paper}>
             <TextField className={classes.textField} id="outlined-basic" label="Name" value={name} variant="outlined" size="small" onChange={(e)=>setName(e.target.value)}/>
-            <Button className={classes.button} variant="contained" size="small" color="primary" type="submit" onClick={fetchCategory}>Submit</Button>
+            <Button style={{background:"#7FFF00"}} variant="contained" size="small" color="primary" type="submit" onClick={fetchCategory}>Submit</Button>
             {error && (
                 <FormHelperText className={classes.errorText}>{error}</FormHelperText>
             )}

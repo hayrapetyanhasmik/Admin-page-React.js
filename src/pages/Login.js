@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme)=>({
     },
     button: {
         marginTop: theme.spacing(2),
+        background:"#7CFC00"
     },
     errorText: {
         marginTop: theme.spacing(1),
@@ -73,7 +74,7 @@ export default function Login (){
             <FormControl className={classes.textField}>
                 <TextField id="password" label="Password" type="password" value={password} required variant="outlined" size="small" onChange={(e)=>setPassword(e.target.value)}/>
             </FormControl>
-            <Button className={classes.button} variant="contained" color="primary" type="submit">Log in</Button>
+            <Button className={classes.button} variant="contained" type="submit">Log in</Button>
             {error && (
                 <FormHelperText className={classes.errorText}>{error}</FormHelperText>
             )}

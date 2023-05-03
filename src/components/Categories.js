@@ -5,9 +5,6 @@ import {DeleteOutlined,Edit} from "@material-ui/icons";
 
 
 const useStyles = makeStyles((theme)=>({
-  header: {
-      backgroundColor: theme.palette.primary.light,
-  },
   box: {
     padding: "15px",
     position: "absolute",
@@ -122,7 +119,7 @@ export default function Categories(){
       <div>
     <TableContainer className={classes.container} component={Paper}>
       <Table aria-label="simple table" >
-        <TableHead className={classes.header}>
+        <TableHead style={{background:"#7FFF00"}}>
           <TableRow >
             <TableCell align="left">ID</TableCell>
             <TableCell align="left">CategoryName</TableCell>
@@ -144,8 +141,8 @@ export default function Categories(){
               <Box className={classes.box}>
                   <Typography id="modal-title" variant="h6" align="center">Edit</Typography>
                   <TextField id="outlined-basic" label="Name"  variant="outlined" value={name} size="small"  style={{ marginBottom: 100}} onChange={(e) => setName(e.target.value)}/> 
-                  <Button type="submit" variant="contained" color="primary" size="small" onClick={()=>updateCategory(defineId)}>Save</Button>
-                  <Button variant="contained" color="primary" size="small" onClick={()=>setOpen(false)}>Close</Button>
+                  <Button style={{background:"#7CFC00"}} type="submit" variant="contained"  size="small" onClick={()=>updateCategory(defineId)}>Save</Button>
+                  <Button style={{background:"#7CFC00"}} variant="contained"  size="small" onClick={()=>setOpen(false)}>Close</Button>
                   </Box>
             </Modal>
         </TableBody>

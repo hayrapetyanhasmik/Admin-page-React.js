@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme)=>({
     },
     button: {
         marginTop: theme.spacing(2),
+        background:"#7FFF00"
     },
     errorText: {
         marginTop: theme.spacing(1),
@@ -92,7 +93,7 @@ export default function CreateProduct (){
                 <TextField id="quantity" label="Quantity" value={quantity} variant="outlined" size="small" onChange={(e)=>setQuantity(e.target.value)}/>
             </FormControl>
             
-            <Button className={classes.button}variant="contained" color="primary" type="submit">Submit</Button>
+            <Button className={classes.button} variant="contained" type="submit">Submit</Button>
             {error && (
                 <FormHelperText className={classes.errorText}>{error}</FormHelperText>
             )}
